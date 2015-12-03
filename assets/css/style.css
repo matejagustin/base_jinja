@@ -1,0 +1,287 @@
+body {
+    background-color: #fff;
+    font-family: calibri;
+}
+
+.header {
+    width: 90%;
+    margin: 0 auto;
+    height: 130px;
+    margin-bottom: 80px;
+}
+#logo {
+    z-index:9999;
+    margin-top: 20px;
+    margin-left: 30px;
+    float: left;
+}
+
+#nav {
+    width: 50%;
+    z-index: 999;
+    margin-top: 25px;
+    float: right;
+}
+
+#nav li {
+    float: right;
+    margin-top: 20px;
+    margin-right: 30px;
+}
+
+ul {
+  list-style-type: none;
+  margin-right: 60px;
+  font-family: "Andale Mono";
+}
+
+#nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+#nav ul li a:hover {
+    color: #fc7653;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+
+#nav ul li a:last-child #logotip {
+    display: none;
+}
+
+#content {
+    width: 86%;
+    margin: 0 auto;
+}
+
+#grid {
+    width:100%;
+    margin-top: -20px;
+}
+
+.box {
+    background-color: #f2efea;
+    width: 18%;
+    height: 450px;
+    float: left;
+    margin-top: 20px;
+    text-align: center;
+    min-width: 250px;
+    }
+
+.box1 {
+    background-color: #fc7653;
+}
+
+#ena {
+    margin-right: 25px;
+}
+
+#dva {
+    margin-right: 25px;
+}
+
+#tri {
+    margin-right: 25px;
+}
+
+#stiri {
+    margin-right: 25px;
+}
+
+.clear {
+    clear: both;
+    }
+.orange {
+    color: #fc7653;
+}
+.soon {
+    color: #fff;
+}
+
+.cifra {
+    margin-top: 40px;
+    font-family: "Andale Mono";
+    color: #666;
+}
+
+.inside {
+    margin-top: 45px;
+}
+
+.andale {
+    font-family: "Andale Mono";
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 60px;
+}
+
+.button-app {
+    font-family: "Andale Mono";
+    font-size: 0.9em;
+    background-color: transparent;
+    color: #666;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    border-style: solid;
+    border-width: 2px;
+
+}
+.button-app1 {
+    font-family: "Andale Mono";
+    font-size: 0.9em;
+    background-color: #fff;
+    color: #fff;
+    text-decoration: none;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 15px;
+    border-style: solid white;
+    border-width: 2px;
+}
+
+.button-app:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.title {
+    font-family: "Andale Mono";
+    padding-top: 45px;
+    line-height: 0.2em;
+ }
+
+#ninja {
+
+    max-width: 50%;
+    margin: 0 auto;
+    padding-left: 100px;
+}
+
+.ninja {
+    margin: 0 auto;
+}
+
+.ninja:hover {
+    content: url('/assets/img/ninja1.png');
+}
+
+.tekst {
+    width: 97%;
+    text-align: justify;
+}
+
+
+.kalkulator {
+    text-align: center;
+    background-color: #f2efea;
+    padding: 40px;
+    width: 40%;
+    margin: 50px auto;
+}
+
+.forma {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "Andale Mono";
+
+}
+
+.forma1 {
+    width: 120px;
+}
+
+.forma2 {
+    width: 80px;
+    margin: 0 15px;
+}
+
+.forma-contact {
+    width: 90%;
+    min-height: 150px;
+}
+
+.gumb {
+    background-color: transparent;
+    border: none;
+    padding: 15px;
+    font-size: 1.1em;
+    font-style: bold;
+    text-align: center;
+    font-family:"Andale Mono";
+    color: #333;
+}
+
+.gumb:hover {
+    color: #fc7653;
+}
+
+::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    color:    #999;
+    font-size: 0.9em;
+    font-style: italic;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+   color:    #999;
+   font-size: 0.9em;
+   font-style: italic;
+   opacity:  1;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+   color:    #999;
+   font-size: 0.9em;
+   font-style: italic;
+   opacity:  1;
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:    #999;
+   font-size: 0.9em;
+   font-style: italic;
+}
+
+#back {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#back:hover {
+    background-color: #fff;
+    color: #666;
+}
+
+.izbrana-loto-stevila {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 8px 10px 8px 10px;
+    font-family: "Andale Mono";
+    color: #666;
+}
+
+
+.izbrana-loto-stevila1 {
+    width: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1px 0;
+    font-family: "Andale Mono";
+    color: #666;
+}
+
+.drzave {
+    text-align:center;
+}

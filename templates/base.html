@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock title %} </title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    {% block extra_head %}{% endblock extra_head %}                <!-- ce bomo slucajno meli dodatne css za posamezne strani -->
+</head>
+<body>
+    <!-- nasa navigacija-->
+    <div class="header">
+        {% block logo %}
+        <div id="logo">
+        <img id="logotip" src="/assets/img/logo-ninja.png">
+        </div>
+        {% endblock logo %}
+        <div id="nav">
+        <ul>
+            <li><a href="/contact">contact</a></li>
+            <li><a href="/projects">projects</a></li>
+            <li><a href="/about">about</a></li>
+        </ul>
+        </div>
+        </div>
+    <!-- konec navigacija-->
+
+    <div id="content">
+    {% block content %} {% endblock content %}
+    </div>
+
+</body>
+</html>
+
+

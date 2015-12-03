@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/calculator.png">
+        <h1 class="orange">Calculator</h1>
+        <br>
+        <form method = "post" action = "/calculator">
+            <input type = "text" placeholder="stevilo 1" class="forma forma1" name = "st1">
+            <input type = "text" placeholder="operacija" class="forma forma2" name = "operacija">
+            <input type = "text" placeholder="stevilo 2" class="forma forma1" name = "st2">
+            <br>
+            <br>
+            <button type = "submit" class="gumb"> >> calculate << </button>
+        </form>
+        <br>
+        <br>
+            {% if rezultat %}
+            <div class="izbrana-loto-stevila1">
+        <p>{{ a }} {{ operacija }} {{ b }} = {{ rezultat }}</p>
+            </div>
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

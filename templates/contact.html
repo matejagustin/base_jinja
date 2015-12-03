@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} kontakt {% endblock title %}
+
+{% block content %}
+<div class="kalkulator">
+<h1 class="orange">Sporočilo:</h1>
+    <br>
+
+<form method = "post" action = "/contact">
+    <input type = "text" class="forma forma-contact" name = "sporocilo">
+    <br>
+    <br>
+    <button type = "submit" class="gumb"> >> pošlji << </button>
+</form>
+<!-- prikaz {"message":msg}-->
+
+{% if message %}            <!-- # če obstaja msg: -->
+<p class="andale forma">vpisal si {{ message }}</p>
+{% endif %}
+</div>
+{% endblock content %}

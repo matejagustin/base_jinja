@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/loto.png">
+        <h1 class="orange">generator loto stevil</h1>
+        <br>
+        <p>How many random numbers do you need?</p>
+        <form method = "post" action = "/loto">
+            <input type = "text" class="forma" name = "loto_stevilo">
+            <br>
+            <br>
+            <button type = "submit" class="gumb"> >> generate << </button>
+        </form>
+        <br>
+        <br>
+            {% if kombinacija %}
+            <p>Randomly chosen numbers:</p>
+            <div class="izbrana-loto-stevila">{% for item in kombinacija %}
+                <span>{{item}}</span>
+            {% endfor %}
+            </div>
+            {% endif %}
+        <br>
+        <br>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

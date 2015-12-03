@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/loto.png">
+        <h1 class="orange">Guess the capital</h1>
+            <form method = "post" class="drzave" action = "/capital">
+
+                <h3>Katero je glavno mesto države {{ state }}?</h3>
+                <br>
+                <img src="{{ url }}">
+                <br>
+                <input type = "text" class="forma" name = "odgovor">
+                <input type="hidden" class="forma" name="pravilen_odgovor" value="{{ capital }}">
+                <br>
+                <br>
+                <button type = "submit" class="gumb"> >> guess << </button>
+            </form>
+
+            <div class="izbrana-loto-stevila1">
+                <p>{{ rezultat }}</p>
+            </div>
+
+        <br>
+        <br>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

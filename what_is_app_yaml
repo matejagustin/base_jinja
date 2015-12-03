@@ -1,0 +1,27 @@
+
+
+application: base_jinja
+version: 1
+runtime: python27
+api_version: 1
+threadsafe: yes
+
+
+##  Naša stran se nahaja na www.example.com
+
+handlers:           ## neke preusmeritve uporabnika
+- url: /assets      ## ko uporabnik (brskalnik) pride na www.example.com/assets , mu prikaže assets
+  static_dir: assets    ## www.example.com/assets/css/style.css
+
+- url: .*
+  script: main.app
+
+  www.example.com/blog
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: markupsafe
+  version: latest
