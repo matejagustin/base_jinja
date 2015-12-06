@@ -64,40 +64,30 @@ ul {
 
 .box {
     background-color: #f2efea;
-    width: 18%;
+    width: 23%;
     height: 450px;
     float: left;
     margin-top: 20px;
     text-align: center;
-    min-width: 250px;
+    min-width: 270px;
     }
 
 .box1 {
     background-color: #fc7653;
 }
 
-#ena {
-    margin-right: 25px;
-}
-
-#dva {
-    margin-right: 25px;
-}
-
-#tri {
-    margin-right: 25px;
-}
-
-#stiri {
+#ena, #dva, #tri, #stiri, #pet, #sest {
     margin-right: 25px;
 }
 
 .clear {
     clear: both;
-    }
+}
+
 .orange {
     color: #fc7653;
 }
+
 .soon {
     color: #fff;
 }
@@ -118,6 +108,12 @@ ul {
     color: #666;
     margin-bottom: 60px;
 }
+
+.andale-text {
+    font-family: "Andale Mono";
+    font-size: 0.9em;
+    color: #333;
+ }
 
 .button-app {
     font-family: "Andale Mono";
@@ -196,7 +192,16 @@ ul {
     text-align: center;
     font-size: 0.9em;
     font-family: "Andale Mono";
+}
 
+.forma4 {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "Andale Mono";
+    width: 70%;
 }
 
 .forma1 {
@@ -285,3 +290,85 @@ ul {
 .drzave {
     text-align:center;
 }
+
+.capital {
+    font-size: 1em;
+    text-align: center;
+    font-family:"Andale Mono";
+    color: #666;
+ }
+
+
+a:visited {
+    tex-align: left;}
+
+a {
+color: #fc7653;
+}
+
+a:hover {
+    color: #666;}
+
+#footer {
+    width: 100%;
+    height: 60px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    font-size: 0.8em;
+    text-align: center;
+    padding-top: 25px;
+    font-family:"andale Mono";
+    color: #333;
+}
+
+#selects {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.forma5 {
+    background-color: #ffffff;
+    border: none;
+    padding: 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "Andale Mono";
+    width: 94%;
+    height:27px;
+}
+
+
+
+#select select {
+   background: url(/assets/img/arrows.png) no-repeat right #fff;
+   width: 49%;
+   text-align: center;
+   font-size: 0.9em;
+   font-family: "Andale Mono";
+   padding: 15px;
+   line-height: 1em;
+   border: 0;
+   border-radius: 0;
+   height: 42px;
+   -webkit-appearance: none;
+   float: left;
+   }
+
+#select1 select {
+   background: url(/assets/img/arrows.png) no-repeat right #fff;
+   width: 49%;
+   text-align: center;
+   font-size: 0.9em;
+   font-family: "Andale Mono";
+   padding: 15px;
+   line-height: 1em;
+   border: 0;
+   border-radius: 0;
+   height: 42px;
+   -webkit-appearance: none;
+   float: right;
+   margin-right:0;
+   }

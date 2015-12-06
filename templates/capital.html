@@ -4,24 +4,42 @@
 {% block content %}
 <body>
         <div class="kalkulator">
-        <img src="/assets/img/loto.png">
+        <br>
         <h1 class="orange">Guess the capital</h1>
-            <form method = "post" class="drzave" action = "/capital">
 
-                <h3>Katero je glavno mesto države {{ state }}?</h3>
+        {% if is_visible %}
+
+            <form method = "post" class="drzave" action = "/capital">
+                <p class="capital">do you wish to begin?</p>
+                <input type = "text" class="forma" name = "pricni" placeholder="yes/no">
                 <br>
-                <img src="{{ url }}">
-                <br>
-                <input type = "text" class="forma" name = "odgovor">
-                <input type="hidden" class="forma" name="pravilen_odgovor" value="{{ capital }}">
-                <br>
-                <br>
-                <button type = "submit" class="gumb"> >> guess << </button>
+                <button type = "submit" class="gumb"> >> start << </button>
             </form>
 
-            <div class="izbrana-loto-stevila1">
-                <p>{{ rezultat }}</p>
-            </div>
+        {% endif %}
+
+        {% if not is_visible %}
+
+        <form method = "post" class="drzave" action = "/capital">
+
+            <p class="capital">What is the capital of {{ state }}?</p>
+            <br>
+            <img src="{{ url }}">
+            <br>
+            <input type = "text" class="forma" name = "odgovor">
+            <input type="hidden" class="forma" name="pravilen_odgovor" value="{{ capital }}">
+            <br>
+            <br>
+            <button type = "submit" class="gumb"> >> guess << </button>
+        </form>
+
+        <div class="izbrana-loto-stevila1">
+
+            <p>{{ rezultat }}</p>
+        </div>
+
+        {% endif %}
+
 
         <br>
         <br>

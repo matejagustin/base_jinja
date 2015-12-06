@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/hotel.png">
+        <h1 class="orange">Filton guestbook</h1>
+        <br>
+        <p class="capital">Give us a note:</p>
+        <form method = "post" action = "/izpis">
+            <input type = "text" class="forma4" placeholder="eg. Smart Ninja" name = "ime">
+            <br>
+            <input type = "text" class="forma4" placeholder="smart@ninja.com" name = "mail">
+            <br>
+            <input type = "text" class="forma4" placeholder="your message" name = "sporocilo">
+            <br>
+            <br>
+            <button type = "submit" class="gumb"> >> submit << </button>
+
+        </form>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

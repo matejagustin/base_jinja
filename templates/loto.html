@@ -7,7 +7,7 @@
         <img src="/assets/img/loto.png">
         <h1 class="orange">generator loto stevil</h1>
         <br>
-        <p>How many random numbers do you need?</p>
+        <p class="capital">How many random numbers do you need?</p>
         <form method = "post" action = "/loto">
             <input type = "text" class="forma" name = "loto_stevilo">
             <br>
@@ -17,7 +17,7 @@
         <br>
         <br>
             {% if kombinacija %}
-            <p>Randomly chosen numbers:</p>
+            <p class="andale">Randomly chosen numbers:</p>
             <div class="izbrana-loto-stevila">{% for item in kombinacija %}
                 <span>{{item}}</span>
             {% endfor %}

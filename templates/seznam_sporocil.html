@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}  {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <h1 class="orange">Message list</h1>
+        <br>
+        {% for message in seznam %}
+        <div class="forma">
+        <p><a href="/sporocilo/{{ message.key.id() }}">{{ message.ime }}</a></p>
+        {{ message.nastanek }}
+        <br>
+        </div>
+        <br>
+        {% endfor %}
+        <p><a id="back" class="button-app" href="/hotel">back to guestbook</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

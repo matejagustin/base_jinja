@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">Your message:</h1>
+    <br>
+    <p class="forma"> {{ message }} </p>
+    <br>
+
+    <p><a class="button-app" href="/seznam_sporocil">message list</a></p>
+    <br>
+    <br>
+    <p><a id="back" class="button-app" href="/hotel">back to guestbook</a></p>
+
+</div>
+
+</body>
+{% endblock content %}
+</html>

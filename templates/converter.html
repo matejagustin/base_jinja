@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/units.png">
+        <h1 class="orange">Unit converter</h1>
+        <br>
+        <form method = "post" action = "/converter">
+            <div id="selects">
+            <div id="value-convert">
+                <input class="forma5" type="text" placeholder="enter a number to convert" name="number">
+            </div>
+                <br>
+            <div id="select">
+            <select name="select">
+                <option selected disabled>From unit:</option>
+                <option name="mm" value="mm">mm</option>
+                <option name="cm" value="cm">cm</option>
+                <option name="m" value="m">m</option>
+                <option name="km" value="km">km</option>
+                <option name="g" value="g">g</option>
+                <option name="kg" value="kg">kg</option>
+                <option name="t" value="t">t</option>
+            </select>
+            </div>
+            <div id="select1">
+            <select name="select2">
+                <option selected disabled>To unit:</option>
+                <option name="mm" value="mm">mm</option>
+                <option name="cm" value="cm">cm</option>
+                <option name="m" value="m">m</option>
+                <option name="km" value="km">km</option>
+                <option name="g" value="g">g</option>
+                <option name="kg" value="kg">kg</option>
+                <option name="t" value="t">t</option>
+            </select>
+            </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button type = "submit" class="gumb"> >> calculate << </button>
+        </form>
+        <br>
+        {% if result %}
+            <div class="izbrana-loto-stevila1">
+                <p>{{ number }} {{ unit }} = {{ result }} {{ unit2 }}</p>
+            </div>
+        {% endif %}
+
+        {% if not result %}
+            <div class="izbrana-loto-stevila1">
+                <p>{{ error }}</p>
+            </div>
+        {% endif %}
+        {% if unit %}
+        {% if valueError %}
+            <div class="izbrana-loto-stevila1">
+            <p style="color:#fc7653;">{{ valueError }}</p>
+            </div>
+        {% endif %}
+        {% endif %}
+        <br>
+        <br>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>
