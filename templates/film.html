@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/movie.png">
+        <h1 class="orange">Movie list</h1>
+        <br>
+        <p class="capital">Enter a movie:</p>
+        <form method = "post" action = "/film_izpis">
+            <input type = "text" class="forma4" placeholder="Title" name = "title">
+            <br>
+            <textarea class="forma4" placeholder="image url" name="url"></textarea>
+            <br>
+            <br>
+            <p class="capital">Rate a movie:</p>
+            <div class="forma5">
+            <input id="1star" type="radio" name="rate" value="<i class='fa fa-star fa-lg'></i>">
+            <label for="1star"></label>
+            <input id="2star" type="radio" name="rate" value="<i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i>">
+            <label for="2star"></label>
+            <input id="3star" type="radio" name="rate" value="<i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i>">
+            <label for="3star"></label>
+            <input id="4star" type="radio" name="rate" value="<i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i>">
+            <label for="4star"></label>
+            <input id="5star" type="radio" name="rate" value="<i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i> <i class='fa fa-star fa-lg'></i>">
+            <label for="5star"></label>
+            <br>
+            </div>
+             <br>
+            <br>
+            <button type = "submit" class="gumb"> >> submit << </button>
+        </form>
+        <br>
+        <p><a id="back1" class="button-app" href="/film_seznam">Movie list</a></p>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>
+
+
+

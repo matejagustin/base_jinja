@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">Task details info:</h1>
+    <br>
+    <div class="forma">
+        <p class="andale-text"><h2 class="orange">{{ task.naslov }}</h2></p>
+        <p class="andale-text"><br><p><b>{{ task.vsebina }}</b></p></p>
+        <br>
+    </div>
+        <br>
+        <br>
+        <br>
+    {% if completed %}
+    <p>uspelo</p>
+    {% endif %}
+    <a href="/todo_details/{{ task.key.id() }}/edit">edit</a>
+    <a href="/todo_details/{{ task.key.id() }}/delete">delete</a>
+
+    <p><a id="back" class="button-app" href="/todo_seznam">TASK LIST</a></p>
+    <br>
+    <p><a id="back" class="button-app" href="/todo">back to TO-DO app</a></p>
+</div>
+
+</body>
+{% endblock content %}
+</html>

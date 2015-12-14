@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">Message info:</h1>
+
+    <form method="post" action="/sporocilo/{{ sporocilo.key.id() }}/uredi">
+        <input class="forma" type="text" name="vnos" value="{{ sporocilo.sporocilo }}">
+        <button class="button-app" type="submit">uredi</button>
+    </form>
+<br>
+    <br>
+        <br>
+        <p><a class="button-app" href="/seznam_sporocil">back to message list</a></p>
+    <br>
+    <p><a id="back" class="button-app" href="/hotel">back to guestbook</a></p>
+</div>
+
+</body>
+{% endblock content %}
+</html>

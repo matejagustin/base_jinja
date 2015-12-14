@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/todo.png">
+
+        <form action="/test" method="post">
+            <div class="radio">
+                <input id="1star" type="radio" name="test1" value="1star">
+                <label for="1star"></label>
+                <input id="2star" type="radio" name="test2" value="female">
+                <label for="2star"></label>
+                <input id="3star" type="radio" name="test3" value="bla">
+                <label for="3star"></label>
+            </div>
+    <button type = "submit" class="gumb"> >> submit << </button>
+     </form>
+
+{% if test1 %}
+<i class="fa fa-star"></i>
+{% endif %}
+{% if test2 %}
+<i class="fa fa-star"></i> <i class="fa fa-star"></i>
+{% endif %}
+        <br>
+        <p><a id="back1" class="button-app" href="/todo_seznam">TASK LIST</a></p>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+
+ <br>
+ <br>
+ <br>
+</body>
+{% endblock content %}
+</html>
+
+
+
+
+
+

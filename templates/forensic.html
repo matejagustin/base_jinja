@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+            <img src="/assets/img/dnk.png">
+            <h1 class="orange">Forensic program</h1>
+            <p class="capital">Enter a DNK:</p>
+            <form method = "post" action = "/forensic">
+                <textarea placeholder="eg. 'CCAGCAATCGC', 'GCCAGTGCCGTTAGCTATCGC'" name="dnk_enter" required></textarea>
+                <br>
+                <br>
+                <button type = "submit" class="gumb"> >> submit << </button>
+                <br>
+                <br>
+                <div class="izbrana-loto-stevila2">
+                {% if suspect %}
+                    <p>Your suspect has the following characteristics:</p>
+                        <ul>
+                            <li>{{ rase }}</li>
+                            <li>{{ gender }}</li>
+                            <li>{{ hair }}</li>
+                            <li>{{ face }}</li>
+                            <li>{{ eyes }}</li>
+                        </ul>
+                {% endif %}
+                {% if error %}
+                    <p style="color:#fc7653;">Enter a valid DNK code.</p>
+                {% endif %}
+                </div>
+            </form>
+            <br>
+            <br>
+            <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+        </div>
+</body>
+{% endblock content %}
+</html>
+

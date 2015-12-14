@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/todo.png">
+        <h1 class="orange">New task:</h1>
+        <form method = "post" action = "/todo_task">
+            <p class="capital">Title:</p>
+            <input type = "text" class="forma4" placeholder="eg. Go shopping" name = "title">
+            <br>
+            <p class="capital">Notes:</p>
+            <textarea class="forma4" placeholder="buy coffee & milk" name = "notes"></textarea>
+            <br>
+            <p class="capital">Author:</p>
+            <input type = "text" class="forma4" placeholder="Just Me" name = "author">
+            <button type = "submit" class="gumb"> >> submit << </button>
+
+        </form>
+        <br>
+        <p><a id="back1" class="button-app" href="/todo_seznam">TASK LIST</a></p>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+    </div>
+ <br>
+ <br>
+ <br>
+</body>
+{% endblock content %}
+</html>

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+    <div class="kalkulator">
+        <img src="/assets/img/todo.png">
+        <br>
+        <br>
+        {% for task in seznam %}
+
+        {% if not task.dokoncan %}
+
+        <div class="forma">
+            {% if task.avtor %}
+            <div class="avtor">
+                <ul>
+                    <li>{{ task.avtor }}, {{ task.nastanek }}:</li>
+                </ul>
+            </div>
+            {% endif %}
+            {% if not task.avtor %}
+            <div class="avtor">
+                <ul>
+                    <li>Unknown, {{ task.nastanek }}:</li>
+                </ul>
+            </div>
+            {% endif %}
+            <div class="levi_del">
+            {% if task.naslov %}
+            <h2 class="orange"><a href="/todo_details/{{ task.key.id() }}">{{ task.naslov }}</a></h2>
+            {% endif %}
+            {% if not task.naslov %}
+            <h2 class="orange"><a href="/todo_details/{{ task.key.id() }}">untitled</a></h2>
+            {% endif %}
+            {{ task.vsebina }}
+            </div>
+            <div class="desni_del">
+                <ul>
+                    <li><a href="/todo_details/{{ task.key.id() }}/edit"><i class="fa fa-pencil fa-lg"></i></a></li>
+                    <li><a href="/todo_details/{{ task.key.id() }}/delete"><i class="fa fa-trash fa-lg"></i></a></li>
+                    <li><a href="/todo_details/{{ task.key.id() }}/completed"><i class='fa fa-check fa-lg'></i></a></li>
+                </ul>
+            </div>
+            <div id="clear"></div>
+        </div>
+        <br>
+
+        {% endif %}
+        {% if task.dokoncan %}
+        <div class="forma">
+            {% if task.avtor %}
+            <div class="avtor">
+                <ul>
+                    <li>{{ task.avtor }}, {{ task.nastanek }}:</li>
+                </ul>
+            </div>
+            {% endif %}
+            {% if not task.avtor %}
+            <div class="avtor">
+                <ul>
+                    <li>Unknown, {{ task.nastanek }}:</li>
+                </ul>
+            </div>
+            {% endif %}
+            <div class="levi_del">
+            {% if task.naslov %}
+            <h2 style="color:#999;">{{ task.naslov }}</h2>
+            {% endif %}
+            {% if not task.naslov %}
+            <h2 style="color:#999;">untitled</h2>
+            {% endif %}
+
+            <p style="color:#999;">{{ task.vsebina }}</p>
+            </div>
+            <div class="desni_del">
+                <ul>
+                    <li style="color:#ccc;"><i class="fa fa-pencil fa-lg"></i></li>
+                    <li style="color:#333;"><a href="/todo_details/{{ task.key.id() }}/delete"><i class="fa fa-trash fa-lg"></i></a></li>
+                    <li style="color:#47c956;"><i class='fa fa-check fa-lg'></i></li>
+                </ul>
+            </div>
+            <div id="clear"></div>
+        </div>
+         <br>
+        {% endif %}
+
+
+        {% endfor %}
+
+        <p><a id="back1" class="button-app" href="/todo">new task</a></p>
+        <br>
+        <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
+
+    </div>
+</body>
+{% endblock content %}
+
+
+

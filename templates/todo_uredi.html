@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">Task details:</h1>
+
+    <form method="post" action="/todo_details/{{ task.key.id() }}/edit">
+        <input class="forma" type="text" name="vnos" value="{{ task.vsebina }}">
+        <button class="button-app" type="submit">edit</button>
+    </form>
+<br>
+    <br>
+    <br>
+    <p><a id="back" class="button-app" href="/todo_seznam">TASK LIST</a></p>
+    <br>
+    <p><a id="back" class="button-app" href="/todo">back to TO-DO app</a></p>
+
+</body>
+{% endblock content %}
+</html>

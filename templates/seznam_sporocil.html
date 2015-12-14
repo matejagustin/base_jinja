@@ -8,8 +8,14 @@
         <br>
         {% for message in seznam %}
         <div class="forma">
+        {% if message.ime %}
         <p><a href="/sporocilo/{{ message.key.id() }}">{{ message.ime }}</a></p>
+        {% endif %}
+        {% if not message.ime %}
+        <p><a href="/sporocilo/{{ message.key.id() }}">unknown</a></p>
+        {% endif %}
         {{ message.nastanek }}
+
         <br>
         </div>
         <br>

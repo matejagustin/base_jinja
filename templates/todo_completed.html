@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">Mark as completed?</h1>
+
+    <form method="post" action="/todo_details/{{ task.key.id() }}/completed">
+        <button id="back" class="button-app" type="submit"><i class='fa fa-check fa-lg fa-2x'></i></button>
+    </form>
+<br>
+    <br>
+</div>
+
+</body>
+{% endblock content %}
+</html>

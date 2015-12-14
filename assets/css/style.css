@@ -64,19 +64,19 @@ ul {
 
 .box {
     background-color: #f2efea;
-    width: 23%;
+    width: 18%;
     height: 450px;
     float: left;
     margin-top: 20px;
     text-align: center;
-    min-width: 270px;
+    min-width: 230px;
     }
 
 .box1 {
     background-color: #fc7653;
 }
 
-#ena, #dva, #tri, #stiri, #pet, #sest {
+#ena, #dva, #tri, #stiri, #pet, #sest, #sedem, #osem {
     margin-right: 25px;
 }
 
@@ -86,6 +86,10 @@ ul {
 
 .orange {
     color: #fc7653;
+}
+
+.grey {
+    color: #666;
 }
 
 .soon {
@@ -204,6 +208,18 @@ ul {
     width: 70%;
 }
 
+.forma5 {
+    background-color: #ffffff;
+    border: none;
+    padding: 17px 10px 13px 10px;
+    text-align: center;
+    font-size: 0.9em;
+    font-family: "Andale Mono";
+    width: 70%;
+    margin: 0 auto;
+
+}
+
 .forma1 {
     width: 120px;
 }
@@ -287,6 +303,17 @@ ul {
     color: #666;
 }
 
+.izbrana-loto-stevila2 {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 8px 10px 8px 10px;
+    font-family: "Andale Mono";
+    color: #666;
+    font-size:0.9em;
+    min-height: 40px;
+}
+
 .drzave {
     text-align:center;
 }
@@ -296,6 +323,14 @@ ul {
     text-align: center;
     font-family:"Andale Mono";
     color: #666;
+ }
+
+.capital1 {
+    font-size: 1.1em;
+    text-align: center;
+    font-family:"Andale Mono";
+    color: #fc7653;
+    font-style:bold;
  }
 
 
@@ -311,7 +346,7 @@ a:hover {
 
 #footer {
     width: 100%;
-    height: 60px;
+    height: 30px;
     background-color: #fff;
     position: fixed;
     bottom: 0;
@@ -322,6 +357,10 @@ a:hover {
     color: #333;
 }
 
+#www {
+    margin: 0 auto;
+}
+
 #selects {
     width: 60%;
     height: auto;
@@ -329,16 +368,6 @@ a:hover {
     margin: 0 auto;
 }
 
-.forma5 {
-    background-color: #ffffff;
-    border: none;
-    padding: 10px;
-    text-align: center;
-    font-size: 0.9em;
-    font-family: "Andale Mono";
-    width: 94%;
-    height:27px;
-}
 
 
 
@@ -372,3 +401,128 @@ a:hover {
    float: right;
    margin-right:0;
    }
+
+textarea {
+    background-color:#fff;
+    width: 80%;
+    min-height: 30px;
+    border: none;
+    text-align: center;
+    font-family: "Andale Mono";
+    font-size: 0.8em;
+    padding-top: 10px;
+}
+
+
+.desni_del {
+    margin-top: 20px;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+
+
+}
+.desni_del ul {
+    text-align: center;
+    margin: 0 auto;
+    margin-left: 15%;
+    margin-top: 20px;
+
+}
+
+.desni_del ul li {
+    display:inline;
+    text-align: center;
+    margin-right: 35px;
+    float: left;
+    margin-top: 20px;
+}
+
+.desni_del ul li a  {
+    color: #333;
+    text-decoration: none;
+}
+
+.desni_del ul li a:hover  {
+    color: #fc7653;
+}
+
+
+#clear {
+    clear: both;
+}
+
+a {
+    text-decoration: none;
+}
+
+#back1 {
+    background-color: #fc7653;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+#back1:hover {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.avtor {
+    width: 100%;
+    text-align: left;
+    margin-left: -33px;
+    color: #ccc;
+    margin-top: -15px;
+
+}
+
+label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 15px;
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label:before {
+    content: "\2736";
+    display: inline-block;
+    font-size: 30px;
+    line-height: 18px;
+    color:#666;
+
+    width: 16px;
+    height: 16px;
+
+    margin-right: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 1px;
+    background-color: transparent;
+}
+
+.radio label:before {
+    border-radius: 1px;
+}
+
+input[type=radio]:checked + label:before {
+    content: "\2736";
+    color: gold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.ratings ul li {
+    display: inline;
+    margin-right: 8px;
+    color: gold;
+}

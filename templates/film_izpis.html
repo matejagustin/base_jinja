@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">You have entered a movie:</h1>
+    <br>
+    <div class="forma ratings">
+        <ul>
+            <li><h2 class="orange">{{ movie.title }}</h2></li>
+            <br>
+            <img src="{{ movie.url }}" width="142">
+            <p class="capital">Your ratings:</p>
+            <li>
+                {{ movie.rate }}
+            </li>
+
+        </ul>
+    </div>
+    <br>
+
+    <p><a id="back1" class="button-app" href="/film">NEW ENTRY</a></p>
+    <br>
+    <p><a id="back" class="button-app" href="/film_seznam">Movie list</a></p>
+        <br>
+
+
+</div>
+
+</body>
+{% endblock content %}
+</html>
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}  {% endblock title %}
+
+{% block content %}
+
+<body>
+        <div class="kalkulator">
+        <h1 class="orange">Movie list:</h1>
+        <br>
+        {% for film in filmi %}
+        <div class="forma">
+        <h2 class="orange grey">{{ film.title }}</h2>
+        <br>
+        <a href="{{ film.url }}"><img src="{{ film.url }}" width="142"/></a>
+        <br>
+        <p style="color: gold;">{{ film.rate }}</p>
+        </div>
+        <br>
+        {% endfor %}
+        <p><a id="back1" class="button-app" href="/film">NEW ENTRY</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>
+

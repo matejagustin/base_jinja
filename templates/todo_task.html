@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+        <div class="kalkulator">
+        <img src="/assets/img/todo.png">
+        <p class="capital">Your note has been saved.</p>
+        <div class="forma">
+        <h2 class="orange">{{ title }}</h2>
+        <p class="capital">{{ notes }}</p>
+        </div>
+
+        <br>
+        <p><a id="back" class="button-app" href="/todo_seznam">TASK LIST</a></p>
+        <br>
+        <p><a id="back" class="button-app" href="/todo">back to TO-DO app</a></p>
+    </div>
+</body>
+{% endblock content %}
+</html>

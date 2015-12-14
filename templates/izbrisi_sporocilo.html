@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} PROJECTS {% endblock title %}
+
+{% block content %}
+<body>
+<div class="kalkulator">
+    <h1 class="orange">SI ZIHER?</h1>
+
+    <form method="post" action="/sporocilo/{{ sporocilo.key.id() }}/izbrisi">
+        <button class="button-app" type="submit">POTRDI</button>
+    </form>
+<br>
+    <br>
+</div>
+
+</body>
+{% endblock content %}
+</html>
