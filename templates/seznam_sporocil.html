@@ -8,15 +8,20 @@
         <br>
         {% for message in seznam %}
         <div class="forma">
-        {% if message.ime %}
-        <p><a href="/sporocilo/{{ message.key.id() }}">{{ message.ime }}</a></p>
-        {% endif %}
-        {% if not message.ime %}
-        <p><a href="/sporocilo/{{ message.key.id() }}">unknown</a></p>
-        {% endif %}
-        {{ message.nastanek }}
-
-        <br>
+                <p class="capital levi">{{ message.nastanek }} </p>
+                {% if message.ime %}
+                <h3 class="orange"><a href="/sporocilo/{{ message.key.id() }}">{{ message.ime }}</a></h3>
+                {% endif %}
+                {% if not message.ime %}
+                <h3 class="orange"><a href="/sporocilo/{{ message.key.id() }}">unknown</a></h3>
+                {% endif %}
+                {{ message.sporocilo }}
+                <br>
+                <br>
+                <br>
+                <a class="reply" href="mailto:{{ uporabnik.email() }}" target="_top"><i class="fa fa-envelope fa-lg"></i></a>
+                <br>
+                <br>
         </div>
         <br>
         {% endfor %}

@@ -526,3 +526,29 @@ input[type=radio]:checked + label:before {
     margin-right: 8px;
     color: gold;
 }
+
+.levi {
+    text-align: left;
+    margin-left: 15px;
+    font-size: 0.8em;
+    color: #999;
+    padding-bottom: 0;
+}
+
+.email {
+    font-size: 0.9em;
+    color: #999;
+}
+
+.reply {
+    color: #666;
+}
+
+.reply:hover {
+    color: #fc7653;
+}
+
+.orange1 {
+    font-family: "Andale Mono";
+    color: #333;
+}

@@ -3,7 +3,13 @@
 
 {% block content %}
 <body>
-        <div class="kalkulator">
+
+{% if logiran %}
+
+<p class="capital">Hello {{ uporabnik.nickname() }}!</p>
+<p class="capital"><a href="{{ logout_url }}">ODJAVA</a></p>
+
+<div class="kalkulator">
         <img src="/assets/img/hotel.png">
         <h1 class="orange">Filton guestbook</h1>
         <br>
@@ -11,8 +17,13 @@
         <form method = "post" action = "/izpis">
             <input type = "text" class="forma4" placeholder="eg. Smart Ninja" name = "ime">
             <br>
+            {% if not uporabnik.email() %}
             <input type = "text" class="forma4" placeholder="smart@ninja.com" name = "mail">
             <br>
+            {% else %}
+            <input type = "text" class="forma4" placeholder="{{ uporabnik.email() }}">
+            {% endif %}
+
             <input type = "text" class="forma4" placeholder="your message" name = "sporocilo">
             <br>
             <br>
@@ -20,8 +31,20 @@
 
         </form>
         <br>
+        <p><a id="back1" class="button-app" href="/seznam_sporocil">Message list</a></p>
+        <br>
         <p><a id="back" class="button-app" href="/projects">back to apps</a></p>
     </div>
+
+{% else %}
+
+<div class="kalkulator">
+<h2 class="orange orange1">Hello stranger!</h2>
+<h3 class="capital"><a href="{{ login_url }}">LOGIN</a></h3>
+</div>
+{% endif %}
+
+
 </body>
 {% endblock content %}
 </html>

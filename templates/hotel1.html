@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+{% if logiran %}
+
+<h1>Hello Smart Ninja {{ uporabnik.nickname() }}, {{ uporabnik.email() }}</h1>
+<p><a href="{{ logout_url }}">Odjava</a></p>
+
+{% else %}
+
+<h1>Hello Anonimnež</h1>
+<p>Prijavi se na: <a href="{{ login_url }}">tukaj</a></p>
+
+{% endif %}
+
+</body>
+</html>

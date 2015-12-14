@@ -6,6 +6,7 @@ import random
 from models import Message
 from models import Todo
 from models import Movie
+from google.appengine.api import users
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir), autoescape=False)
@@ -325,12 +326,34 @@ class ForensicHandler(BaseHandler):
 class MessageHandler(BaseHandler):
 
     def get(self):
-        self.render_template("hotel.html")
+
+        uporabnik = users.get_current_user()         #pridobil oz shranl podatke od tega userja, ki je/ni logiran na naso stran
+
+        if uporabnik:
+                #ce je prijavljen:
+            logiran = True
+            logout_url = users.create_logout_url('/hotel')
+            params = {"logiran":logiran,"logout_url":logout_url,"uporabnik":uporabnik}
+        else:
+                # tukaj ni prijavljen:
+            logiran = False
+            login_url = users.create_login_url('/hotel')
+            params = {"logiran":logiran,"login_url":login_url}
+
+        self.render_template("hotel.html",params=params)
 
     def post(self):
+
+        uporabnik = users.get_current_user()
+
         name = self.request.get("ime")
-        email = self.request.get("mail")
         message = self.request.get("sporocilo")
+
+        if uporabnik:
+            email = uporabnik.email()
+        else:
+            email = self.request.get("mail")
+
 
         whole_message = Message(ime=name,mail=email,sporocilo=message)
         whole_message.put()
@@ -340,10 +363,12 @@ class MessageHandler(BaseHandler):
         self.write(message)
 
 
+
 class SeznamSporocilHandler(BaseHandler):
     def get(self):
+        uporabnik = users.get_current_user()
         seznam = Message.query(Message.izbrisan == False).fetch()         # da prikazes samo tiste, ki niso izbrisani (v queriju)
-        params = {"seznam":seznam}
+        params = {"seznam":seznam,"uporabnik":uporabnik}
         return self.render_template("seznam_sporocil.html",params=params)
 
 class SporociloHandler(BaseHandler):
@@ -462,7 +487,6 @@ class TodoEditHandler(BaseHandler):                       #ista koda, samo druga
         vnos = self.request.get("vnos")
         task = Todo.get_by_id(int(task_id))
         task.vsebina = vnos
-
         task.put()
 
         self.redirect_to("todo_seznam")         #to je ta url iz handlerja (ne ime template)
@@ -472,31 +496,19 @@ class TodoEditHandler(BaseHandler):                       #ista koda, samo druga
 class TodoDeleteHandler(BaseHandler):
     def get(self,task_id):
         task = Todo.get_by_id(int(task_id))
-        params = {"task":task}
-        return self.render_template("todo_izbrisi.html",params=params)
-
-    def post(self,task_id):                                # ce hocemo trajno zbrisat sporocilo: sporocilo.key.delete() in potem redirect
-        task = Todo.get_by_id(int(task_id))
         task.izbrisan = True
-
         task.put()
-
         self.redirect_to("todo_seznam")
 
 
 class TodoCompletedHandler(BaseHandler):
     def get(self,task_id):
         task = Todo.get_by_id(int(task_id))
-        params = {"task":task}
-        return self.render_template("todo_completed.html",params=params)
-
-    def post(self,task_id):                                # ce hocemo trajno zbrisat sporocilo: sporocilo.key.delete() in potem redirect
-        task = Todo.get_by_id(int(task_id))
-        task.dokoncan = True
-
+        task.dokoncan = True                # ce hocemo trajno zbrisat sporocilo: sporocilo.key.delete() in potem redirect
         task.put()
 
         self.redirect_to("todo_seznam")
+
 
 class TestHandler(BaseHandler):
     def get(self):
